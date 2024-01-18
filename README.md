@@ -1,6 +1,6 @@
 # kubectl-cheat-sheet
 
-![image](https://github.com/alperen-selcuk/kubectl-cheat-sheet/assets/78741582/40ab9dca-014f-423b-a525-44429d54f4f1)
+![image](https://github.com/alperen-selcuk/kubectl-cheat-sheet/assets/78741582/75e088ff-903d-4c2a-b869-788e27c3a401)
 
 
 
