@@ -1,5 +1,8 @@
 # kubectl-cheat-sheet
 
+![image](https://github.com/alperen-selcuk/kubectl-cheat-sheet/assets/78741582/17172f89-c176-43b6-96b6-7c8f93775d1e)
+
+
 ## run
 pod yaratmak için kullanılır
 
