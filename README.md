@@ -50,11 +50,20 @@ kubectl expose deployment/nginx --port=80 --type=LoadBalancer
 ```
 
 ## edit
-anlık olarak kubernetes resourcelarını değiştirmek için kullanılır.
+anlık olarak kubernetes resourcelarını değiştirmek için kullanılır. burada editorü de kendiniz seçebilirsiniz. KUBE_EDITOR="nano" derseniz editlemeyi nano da açar. KUBE_EDITOR="vim" derseniz de vim de açarsınız bunu bashrc/zshrc export KUBE_EDITOR="nano" dosyasına koymanız yeterli. 
 
 ```
 kubectl edit deployment web
 ``` 
+
+## top
+
+kubernetes pod ve nodeların anlık cpu ve mem kullanımlarını gösterir. bu komutun tam anlamıyla çalışabilmesi için kubernetes üzerinde bir metric server olması gerekir. 
+
+```
+kubectl top nodes
+kubectl top pods
+```
 
 ## set image
 kubernetes deployment veya pod üzerinde image i değiştirmek için kullanılır. kubernetes deployment ile container isminiz aynı olması lazım. 
@@ -72,6 +81,14 @@ kubectl rollout history deployment/web
 kubectl rollout undo deployment/web --to-revision=2
 
 kubectl rollout restart deployment/web
+```
+
+## replace
+
+hard bir şekilde podu silip bir manifest üzerinden tekrar oluşturmaya yarar. normalde mevcutta bulunan bir resource a bir manifest apply ederseniz hata verebilir. bu şekilde replace ederseniz silip yeniden oluşturur.
+
+```
+kubectl replace -f nginx.yaml
 ```
 
 ## scale
